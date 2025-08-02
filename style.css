@@ -1,0 +1,1432 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Header section */
+
+header{
+    width: 100%; 
+    max-width: 100%;
+    padding-left: 100px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    z-index: 1000;
+}
+
+header nav a{
+    color: #fff;
+    margin-right: 5px;
+    padding: 5px 10px;
+    font-size: 16px;
+    transition: 0.2s;
+    text-decoration: none;
+}
+
+a.active{
+    background: #14ff72cb;
+    border-radius: 2px;
+}
+
+a:hover{
+    background: #14ff72cb;
+    border-radius: 2px;
+}
+
+/* Header section */
+
+
+
+/* carousel */
+
+.carousel{
+    width: 100vw;
+    height: 100vh;
+    margin-top: -50px;
+    overflow: hidden;
+    position: relative;
+}
+
+.carousel .list .item{
+    width: 180px;
+    height: 250px;
+    position: absolute;
+    top: 80%;
+    transform: translateY(-70%);
+    left: 70%;
+    border-radius: 20px;
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.3);
+    background-position: 50% 50%;
+    background-size: cover;
+    z-index: 100;
+    transition: 1s;
+}
+
+.carousel .list .item:nth-child(1),
+.carousel .list .item:nth-child(2){
+    top: 0;
+    left: 0;
+    transform: translate(0, 0);
+    border-radius: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.carousel .list .item:nth-child(3){
+    left: 67%;
+}
+
+.carousel .list .item:nth-child(4){
+    left: calc(67% + 200px);
+}
+
+.carousel .list .item:nth-child(5){
+    left: calc(67% + 400px);
+}
+
+.carousel .list .item:nth-child(6){
+    left: calc(67% + 600px);
+}
+
+.carousel .list .item:nth-child(n+7){
+    left: calc(67% + 800px);
+    opacity: 0;
+}
+
+
+
+
+
+.list .item .content{
+    position: absolute;
+    top: 50%;
+    left: 100px;
+    transform: translateY(-50%);
+    width: 400px;
+    text-align: left;
+    color: #fff;
+    display: none;
+}
+
+.list .item:nth-child(2) .content{
+    display: block;
+}
+
+.content .title{
+    font-size: 100px;
+    text-transform: uppercase;
+    color: #14ff72cb;
+    font-weight: bold;
+    line-height: 1;
+
+    opacity: 0;
+    animation: animate 1s ease-in-out 0.3s 1 forwards;
+}
+
+.content .name{
+    font-size: 100px;
+    text-transform: uppercase;
+    font-weight: bold;
+    line-height: 1;
+
+    opacity: 0;
+    animation: animate 1s ease-in-out 0.6s 1 forwards;
+}
+
+.content .des{
+    margin-top: 10px;
+    margin-bottom: 20px;
+    font-size: 18px;
+    margin-left: 5px;
+
+    opacity: 0;
+    animation: animate 1s ease-in-out 0.9s 1 forwards;
+}
+.content .des1{
+    margin-top: 2px;
+    margin-bottom: 2px;
+    font-size: 14px;
+    margin-left: 5px;
+    color:#14ff72;
+    
+
+    opacity: 0;
+    animation: animate 1s ease-in-out 0.9s 1 forwards;
+}
+.content .des0{
+    margin-top: 1px;
+    margin-bottom: 1px;
+    font-size: 26px;
+    margin-left: 5px;
+    font-weight: bold;
+
+    opacity: 0;
+    animation: animate 1s ease-in-out 0.9s 1 forwards;
+}
+
+
+.content .btn{
+    margin-left: 5px;
+
+    opacity: 0;
+    animation: animate 1s ease-in-out 1.2s 1 forwards;
+}
+
+.content .btn button{
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    border: 2px solid #fff;
+}
+
+.content .btn button:nth-child(1){
+    margin-right: 15px;
+}
+
+.content .btn button:nth-child(2){
+    background: transparent;
+    color: #14ff72cb;
+    border: 2px solid #fff;
+    transition: 0.3s;
+}
+
+.content .btn button:nth-child(2):hover{
+    background-color: #14ff72cb;
+    color: #fff;
+    border-color: #14ff72cb;
+}
+
+
+/* Style spécifique pour centrer la slide PARCOURS */
+.content-centered {
+    left: 30% !important;
+    transform: translate(-50%, -50%) !important;
+    text-align: center !important;
+    width: 600px !important;
+    max-width: 90vw;
+}
+
+.content-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.content-centered .title {
+    font-size: 120px;
+    margin-bottom: 10px;
+}
+
+.content-centered .des {
+    font-size: 20px;
+    line-height: 2;
+    max-width: 500px;
+    margin: 0 auto 20px auto;
+}
+
+.content-centered .des0 {
+    font-size: 28px;
+    margin: 0px auto 0px auto !important;
+    max-width: 500px;
+}
+
+.content-centered .des1 {
+    font-size: 16px;
+    margin: 0px auto 0px auto !important;
+    max-width: 500px;
+}
+
+
+.content-centered .btn {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+/* Style spécifique pour la slide COMPÉTENCES */
+.content-skills {
+    right: 0 !important;
+    left: auto !important;
+    transform: translateY(-50%) !important;
+    text-align: left !important;
+    width: 100vw !important;
+    height: 80vh;
+    overflow-y: auto;
+    padding-right: 0;
+    padding-left: 50px;
+}
+
+.content-skills .content-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    padding: 20px 0;
+}
+
+.content-skills .title {
+    font-size: 80px;
+    text-align: center;
+    margin-bottom: 20px;
+    color: #14ff72cb;
+}
+
+.skill-section {
+    margin-bottom: 8px;
+}
+
+.content-skills .des0 {
+    font-size: 22px;
+    font-weight: bold;
+    color: #14ff72cb;
+    margin: 8px 0 3px 0 !important;
+}
+
+.content-skills .des1 {
+    font-size: 16px;
+    margin: 2px 0 2px 20px !important;
+    color: #fff;
+}
+
+.content-skills .btn {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+/* Personnalisation de la barre de scroll pour la slide compétences */
+.content-skills::-webkit-scrollbar {
+    width: 12px;
+}
+
+.content-skills::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 0;
+}
+
+.content-skills::-webkit-scrollbar-thumb {
+    background: #14ff72cb;
+    border-radius: 6px;
+}
+
+.content-skills::-webkit-scrollbar-thumb:hover {
+    background: #14ff72;
+}
+
+/* Style spécifique pour la slide EXPÉRIENCES */
+.content-experience {
+    left: 50px !important;
+    transform: translateY(-50%) !important;
+    text-align: left !important;
+    width: 95vw !important;
+    height: 85vh;
+    overflow-y: auto;
+    padding-right: 20px;
+}
+
+.content-experience .content-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding: 20px 0;
+}
+
+.content-experience .title {
+    font-size: 90px;
+    text-align: center;
+    margin-bottom: 25px;
+    color: #14ff72cb;
+}
+
+.experience-section {
+    margin-bottom: 20px;
+    padding: 15px;
+    background: rgba(0, 0, 0, 0.659);
+    border-radius: 10px;
+    border-left: 0px solid #14ff72cb;
+}
+
+.content-experience .des0 {
+    font-size: 24px;
+    font-weight: bold;
+    color: #14ff72cb;
+    margin: 0 0 8px 0 !important;
+    text-transform: uppercase;
+}
+
+.content-experience .des1 {
+    font-size: 16px;
+    margin: 3px 0 3px 0 !important;
+    color: #fff;
+    font-weight: 500;
+}
+
+.content-experience .des2 {
+    font-size: 15px;
+    margin: 2px 0 2px 15px !important;
+    color: #ddd;
+    font-style: italic;
+}
+
+.tech-tag {
+    font-size: 14px;
+    color: #14ff72cb;
+    background: rgba(20, 255, 114, 0.1);
+    padding: 5px 10px;
+    border-radius: 5px;
+    margin: 8px 0 0 0;
+    font-weight: bold;
+    border: 1px solid #14ff72cb;
+}
+
+.content-experience .btn {
+    margin-top: 25px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+/* Personnalisation scrollbar pour expériences */
+.content-experience::-webkit-scrollbar {
+    width: 10px;
+}
+
+.content-experience::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 5px;
+}
+
+.content-experience::-webkit-scrollbar-thumb {
+    background: #14ff72cb;
+    border-radius: 5px;
+}
+
+.content-experience::-webkit-scrollbar-thumb:hover {
+    background: #14ff72;
+}
+
+/* Responsive pour slide expériences */
+@media screen and (max-width: 999px) {
+    .content-experience {
+        width: 98% !important;
+        left: 1% !important;
+    }
+    
+    .content-experience .title {
+        font-size: 60px;
+    }
+    
+    .content-experience .des0 {
+        font-size: 20px;
+    }
+    
+    .content-experience .des1 {
+        font-size: 14px;
+    }
+    
+    .content-experience .des2 {
+        font-size: 13px;
+        margin-left: 10px !important;
+    }
+    
+    .tech-tag {
+        font-size: 12px;
+    }
+}
+
+@media screen and (max-width: 678px) {
+    .content-experience {
+        width: 98% !important;
+        left: 1% !important;
+        padding-right: 10px;
+    }
+    
+    .content-experience .title {
+        font-size: 45px;
+    }
+    
+    .content-experience .des0 {
+        font-size: 16px;
+    }
+    
+    .content-experience .des1 {
+        font-size: 13px;
+    }
+    
+    .content-experience .des2 {
+        font-size: 12px;
+        margin-left: 8px !important;
+    }
+    
+    .experience-section {
+        padding: 10px;
+        margin-bottom: 15px;
+    }
+    
+    .tech-tag {
+        font-size: 11px;
+        padding: 4px 8px;
+    }
+}
+
+@media screen and (max-width: 999px){
+    
+    header{
+        padding-left: 50px;
+    }
+
+    .list .item .content{
+        left: 50px;
+    }
+
+    .content .title, .content .name{
+        font-size: 70px;
+    }
+
+    .content .des{
+        font-size: 16px;
+    }
+
+}
+
+@media screen and (max-width: 690px){
+    header nav a{
+        font-size: 14px;
+        margin-right: 0;
+    }
+
+    .list .item .content{
+        top: 40%;
+    }
+
+    .content .title, .content .name{
+        font-size: 45px;
+    }
+
+    .content .btn button{
+        padding: 10px 15px;
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 999px) {
+    .content-skills {
+        width: 95% !important;
+        font-size: 14px;
+    }
+    
+    .content-skills .title {
+        font-size: 60px;
+    }
+    
+    .content-skills .des0 {
+        font-size: 18px;
+    }
+    
+    .content-skills .des1 {
+        font-size: 14px;
+        margin-left: 15px !important;
+    }
+}
+
+@media screen and (max-width: 678px) {
+    .content-skills {
+        width: 95% !important;
+        padding: 10px;
+    }
+    
+    .content-skills .title {
+        font-size: 45px;
+    }
+    
+    .content-skills .des0 {
+        font-size: 16px;
+    }
+    
+    .content-skills .des1 {
+        font-size: 13px;
+        margin-left: 10px !important;
+    }
+    
+    .skill-section {
+        margin-bottom: 6px;
+    }
+}
+
+/* Style spécifique pour la slide PROFIL (langues et centres d'intérêt) */
+.content-interests {
+    left: 50px !important;
+    transform: translateY(-50%) !important;
+    text-align: left !important;
+    width: 95vw !important;
+    height: 85vh;
+    overflow-y: auto;
+    padding-right: 20px;
+}
+
+.content-interests .content-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding: 20px 0;
+}
+
+.content-interests .title {
+    font-size: 90px;
+    text-align: center;
+    margin-bottom: 25px;
+    color: #14ff72cb;
+}
+
+.interest-section {
+    margin-bottom: 25px;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.4);
+    border-radius: 15px;
+    border: 2px solid rgba(20, 255, 114, 0.3);
+}
+
+.section-title {
+    font-size: 28px;
+    font-weight: bold;
+    color: #14ff72cb;
+    text-align: center;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    border-bottom: 2px solid #14ff72cb;
+    padding-bottom: 10px;
+}
+
+.interest-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 8px;
+    padding: 8px 15px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 8px;
+}
+
+.category {
+    margin-bottom: 15px;
+    padding: 12px;
+    background: rgba(255, 255, 255, 0.03);
+    border-radius: 8px;
+    border-left: none;
+}
+
+.content-interests .des0 {
+    font-size: 18px;
+    font-weight: bold;
+    color: #14ff72cb;
+    margin-right: 10px;
+    min-width: 100px;
+}
+
+.content-interests .des1 {
+    font-size: 16px;
+    color: #fff;
+    font-weight: 500;
+}
+
+.content-interests .des2 {
+    font-size: 15px;
+    margin: 4px 0 4px 10px !important;
+    color: #ddd;
+    font-style: italic;
+}
+
+.content-interests .btn {
+    margin-top: 25px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+/* Personnalisation scrollbar pour profil */
+.content-interests::-webkit-scrollbar {
+    width: 8px;
+}
+
+.content-interests::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 4px;
+}
+
+.content-interests::-webkit-scrollbar-thumb {
+    background: #14ff72cb;
+    border-radius: 4px;
+}
+
+.content-interests::-webkit-scrollbar-thumb:hover {
+    background: #14ff72;
+}
+
+/* Responsive pour slide profil */
+@media screen and (max-width: 999px) {
+    .content-interests {
+        width: 98% !important;
+        left: 1% !important;
+    }
+    
+    .content-interests .title {
+        font-size: 60px;
+    }
+    
+    .section-title {
+        font-size: 22px;
+    }
+    
+    .content-interests .des0 {
+        font-size: 16px;
+        min-width: 80px;
+    }
+    
+    .content-interests .des1 {
+        font-size: 14px;
+    }
+    
+    .content-interests .des2 {
+        font-size: 13px;
+        margin-left: 8px !important;
+    }
+}
+
+@media screen and (max-width: 678px) {
+    .content-interests {
+        width: 98% !important;
+        left: 1% !important;
+        padding-right: 10px;
+    }
+    
+    .content-interests .title {
+        font-size: 45px;
+    }
+    
+    .section-title {
+        font-size: 18px;
+    }
+    
+    .content-interests .des0 {
+        font-size: 14px;
+        min-width: 70px;
+    }
+    
+    .content-interests .des1 {
+        font-size: 13px;
+    }
+    
+    .content-interests .des2 {
+        font-size: 12px;
+        margin-left: 6px !important;
+    }
+    
+    .interest-item {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 6px 10px;
+    }
+    
+    .interest-section {
+        padding: 15px;
+        margin-bottom: 20px;
+    }
+    
+    .category {
+        padding: 8px;
+        margin-bottom: 12px;
+    }
+}
+
+/* Style spécifique pour la slide CONTACTEZ-MOI */
+.content-contact-invite {
+    left: 50% !important;
+    transform: translate(-50%, -50%) !important;
+    text-align: center !important;
+    width: 800px !important;
+    max-width: 90vw;
+}
+
+.content-contact-invite .content-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+}
+
+.content-contact-invite .title {
+    font-size: 100px;
+    color: #14ff72cb;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+}
+
+.contact-message {
+    margin-top: 350px;
+    text-align: center;
+    max-width: 600px;
+}
+
+.content-contact-invite .des0 {
+    font-size: 36px;
+    font-weight: bold;
+    color: #fff;
+    margin-bottom: 15px !important;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+}
+
+.content-contact-invite .des1 {
+    font-size: 22px;
+    color: #ffffff;
+    margin-bottom: 10px !important;
+    line-height: 1.5;
+}
+
+.content-contact-invite .des2 {
+    font-size: 20px;
+    color: #14ff72cb;
+    font-weight: 500;
+    margin-bottom: 0 !important;
+}
+
+.btn-contact {
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+.contact-btn {
+    background: linear-gradient(45deg, #14ff72cb, #0ea55a);
+    color: #fff;
+    border: none;
+    padding: 20px 50px;
+    font-size: 24px;
+    font-weight: bold;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 8px 20px rgba(20, 255, 114, 0.3);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.contact-btn:hover {
+    background: linear-gradient(45deg, #0ea55a, #14ff72cb);
+    transform: translateY(-3px);
+    box-shadow: 0 12px 25px rgba(20, 255, 114, 0.4);
+    color: #fff;
+}
+
+.contact-btn:active {
+    transform: translateY(-1px);
+    box-shadow: 0 6px 15px rgba(20, 255, 114, 0.3);
+}
+
+.contact-btn i {
+    font-size: 20px;
+}
+
+/* Animation pour la slide contact */
+@keyframes pulse {
+    0% {
+        box-shadow: 0 8px 20px rgba(20, 255, 114, 0.3);
+    }
+    50% {
+        box-shadow: 0 12px 30px rgba(20, 255, 114, 0.5);
+    }
+    100% {
+        box-shadow: 0 8px 20px rgba(20, 255, 114, 0.3);
+    }
+}
+
+.contact-btn {
+    animation: pulse 2s infinite;
+}
+
+/* Responsive pour slide contact */
+@media screen and (max-width: 999px) {
+    .content-contact-invite {
+        width: 95% !important;
+    }
+    
+    .content-contact-invite .title {
+        font-size: 70px;
+    }
+    
+    .content-contact-invite .des0 {
+        font-size: 28px;
+    }
+    
+    .content-contact-invite .des1 {
+        font-size: 18px;
+    }
+    
+    .content-contact-invite .des2 {
+        font-size: 16px;
+    }
+    
+    .contact-btn {
+        padding: 15px 40px;
+        font-size: 20px;
+    }
+}
+
+@media screen and (max-width: 678px) {
+    .content-contact-invite {
+        width: 95% !important;
+        padding: 20px;
+    }
+    
+    .content-contact-invite .title {
+        font-size: 50px;
+    }
+    
+    .content-contact-invite .des0 {
+        font-size: 22px;
+    }
+    
+    .content-contact-invite .des1 {
+        font-size: 16px;
+    }
+    
+    .content-contact-invite .des2 {
+        font-size: 14px;
+    }
+    
+    .contact-btn {
+        padding: 12px 30px;
+        font-size: 18px;
+        gap: 10px;
+    }
+    
+    .contact-btn i {
+        font-size: 16px;
+    }
+}
+
+@keyframes animate {
+    
+    from{
+        opacity: 0;
+        transform: translate(0, 100px);
+        filter: blur(33px);
+    }
+
+    to{
+        opacity: 1;
+        transform: translate(0);
+        filter: blur(0);
+    }
+}
+
+/* Carousel */
+
+
+
+
+
+
+/* next prev arrows */
+
+.arrows{
+    position: absolute;
+    top: 80%;
+    right: 52%;
+    z-index: 100;
+    width: 300px;
+    max-width: 30%;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.arrows button{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #14ff72cb;
+    color: #fff;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    font-family: monospace;
+    font-weight: bold;
+    transition: .5s;
+    cursor: pointer;
+}
+
+.arrows button:hover{
+    background: #fff;
+    color: #000;
+}
+
+
+/* time running */
+.carousel .timeRunning{
+    position: absolute;
+    z-index: 1000;
+    width: 0%;
+    height: 4px;
+    background-color: #14ff72cb;
+    left: 0;
+    top: 0;
+    animation: runningTime 7s linear 1 forwards;
+}
+
+@keyframes runningTime {
+    
+    from{width: 0%;}
+    to{width: 100%;}
+
+}
+
+
+/* Responsive Design */
+
+@media screen and (max-width: 999px){
+    
+    header{
+        padding-left: 50px;
+    }
+
+    .list .item .content{
+        left: 50px;
+    }
+
+    .content .title, .content .name{
+        font-size: 70px;
+    }
+
+    .content .des{
+        font-size: 16px;
+    }
+
+}
+
+@media screen and (max-width: 690px){
+    header nav a{
+        font-size: 14px;
+        margin-right: 0;
+    }
+
+    .list .item .content{
+        top: 40%;
+    }
+
+    .content .title, .content .name{
+        font-size: 45px;
+    }
+
+    .content .btn button{
+        padding: 10px 15px;
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 999px) {
+    .content-skills {
+        width: 95% !important;
+        font-size: 14px;
+    }
+    
+    .content-skills .title {
+        font-size: 60px;
+    }
+    
+    .content-skills .des0 {
+        font-size: 18px;
+    }
+    
+    .content-skills .des1 {
+        font-size: 14px;
+        margin-left: 15px !important;
+    }
+}
+
+@media screen and (max-width: 678px) {
+    .content-skills {
+        width: 95% !important;
+        padding: 10px;
+    }
+    
+    .content-skills .title {
+        font-size: 45px;
+    }
+    
+    .content-skills .des0 {
+        font-size: 16px;
+    }
+    
+    .content-skills .des1 {
+        font-size: 13px;
+        margin-left: 10px !important;
+    }
+    
+    .skill-section {
+        margin-bottom: 6px;
+    }
+}
+
+/* Style spécifique pour la slide PROFIL (langues et centres d'intérêt) */
+.content-interests {
+    left: 50px !important;
+    transform: translateY(-50%) !important;
+    text-align: left !important;
+    width: 95vw !important;
+    height: 85vh;
+    overflow-y: auto;
+    padding-right: 20px;
+}
+
+.content-interests .content-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding: 20px 0;
+}
+
+.content-interests .title {
+    font-size: 90px;
+    text-align: center;
+    margin-bottom: 25px;
+    color: #14ff72cb;
+}
+
+.interest-section {
+    margin-bottom: 25px;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.4);
+    border-radius: 15px;
+    border: 2px solid rgba(20, 255, 114, 0.3);
+}
+
+.section-title {
+    font-size: 28px;
+    font-weight: bold;
+    color: #14ff72cb;
+    text-align: center;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    border-bottom: 2px solid #14ff72cb;
+    padding-bottom: 10px;
+}
+
+.interest-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 8px;
+    padding: 8px 15px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 8px;
+}
+
+.category {
+    margin-bottom: 15px;
+    padding: 12px;
+    background: rgba(255, 255, 255, 0.03);
+    border-radius: 8px;
+    border-left: none;
+}
+
+.content-interests .des0 {
+    font-size: 18px;
+    font-weight: bold;
+    color: #14ff72cb;
+    margin-right: 10px;
+    min-width: 100px;
+}
+
+.content-interests .des1 {
+    font-size: 16px;
+    color: #fff;
+    font-weight: 500;
+}
+
+.content-interests .des2 {
+    font-size: 15px;
+    margin: 4px 0 4px 10px !important;
+    color: #ddd;
+    font-style: italic;
+}
+
+.content-interests .btn {
+    margin-top: 25px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+/* Personnalisation scrollbar pour profil */
+.content-interests::-webkit-scrollbar {
+    width: 8px;
+}
+
+.content-interests::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 4px;
+}
+
+.content-interests::-webkit-scrollbar-thumb {
+    background: #14ff72cb;
+    border-radius: 4px;
+}
+
+.content-interests::-webkit-scrollbar-thumb:hover {
+    background: #14ff72;
+}
+
+/* Responsive pour slide profil */
+@media screen and (max-width: 999px) {
+    .content-interests {
+        width: 98% !important;
+        left: 1% !important;
+    }
+    
+    .content-interests .title {
+        font-size: 60px;
+    }
+    
+    .section-title {
+        font-size: 22px;
+    }
+    
+    .content-interests .des0 {
+        font-size: 16px;
+        min-width: 80px;
+    }
+    
+    .content-interests .des1 {
+        font-size: 14px;
+    }
+    
+    .content-interests .des2 {
+        font-size: 13px;
+        margin-left: 8px !important;
+    }
+}
+
+@media screen and (max-width: 678px) {
+    .content-interests {
+        width: 98% !important;
+        left: 1% !important;
+        padding-right: 10px;
+    }
+    
+    .content-interests .title {
+        font-size: 45px;
+    }
+    
+    .section-title {
+        font-size: 18px;
+    }
+    
+    .content-interests .des0 {
+        font-size: 14px;
+        min-width: 70px;
+    }
+    
+    .content-interests .des1 {
+        font-size: 13px;
+    }
+    
+    .content-interests .des2 {
+        font-size: 12px;
+        margin-left: 6px !important;
+    }
+    
+    .interest-item {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 6px 10px;
+    }
+    
+    .interest-section {
+        padding: 15px;
+        margin-bottom: 20px;
+    }
+    
+    .category {
+        padding: 8px;
+        margin-bottom: 12px;
+    }
+}
+
+/* Style spécifique pour la slide CONTACTEZ-MOI */
+.content-contact-invite {
+    left: 50% !important;
+    transform: translate(-50%, -50%) !important;
+    text-align: center !important;
+    width: 800px !important;
+    max-width: 90vw;
+}
+
+.content-contact-invite .content-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+}
+
+.content-contact-invite .title {
+    font-size: 100px;
+    color: #14ff72cb;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+}
+
+.contact-message {
+    text-align: center;
+    max-width: 300px;
+}
+
+.content-contact-invite .des0 {
+    font-size: 36px;
+    font-weight: bold;
+    color: #fff;
+    margin-bottom: 15px !important;
+
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+}
+
+.content-contact-invite .des1 {
+    font-size: 17px;
+    color: #dddddd;
+    margin-bottom: 10px !important;
+    line-height: 1.5;
+}
+
+.content-contact-invite .des2 {
+    font-size: 14px;
+    color: #14ff72cb;
+    font-weight: 500;
+    margin-bottom: 0 !important;
+}
+
+.btn-contact {
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+.contact-btn {
+    background: linear-gradient(45deg, #14ff72cb, #0ea55a);
+    color: #fff;
+    border: none;
+    padding: 20px 50px;
+    font-size: 24px;
+    font-weight: bold;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 8px 20px rgba(20, 255, 114, 0.3);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.contact-btn:hover {
+    background: linear-gradient(45deg, #0ea55a, #14ff72cb);
+    transform: translateY(-3px);
+    box-shadow: 0 12px 25px rgba(20, 255, 114, 0.4);
+    color: #fff;
+}
+
+.contact-btn:active {
+    transform: translateY(-1px);
+    box-shadow: 0 6px 15px rgba(20, 255, 114, 0.3);
+}
+
+.contact-btn i {
+    font-size: 20px;
+}
+
+/* Animation pour la slide contact */
+@keyframes pulse {
+    0% {
+        box-shadow: 0 8px 20px rgba(20, 255, 114, 0.3);
+    }
+    50% {
+        box-shadow: 0 12px 30px rgba(20, 255, 114, 0.5);
+    }
+    100% {
+        box-shadow: 0 8px 20px rgba(20, 255, 114, 0.3);
+    }
+}
+
+.contact-btn {
+    animation: pulse 2s infinite;
+}
+
+/* Responsive pour slide contact */
+@media screen and (max-width: 999px) {
+    .content-contact-invite {
+        width: 95% !important;
+    }
+    
+    .content-contact-invite .title {
+        font-size: 70px;
+    }
+    
+    .content-contact-invite .des0 {
+        font-size: 28px;
+    }
+    
+    .content-contact-invite .des1 {
+        font-size: 18px;
+    }
+    
+    .content-contact-invite .des2 {
+        font-size: 16px;
+    }
+    
+    .contact-btn {
+        padding: 15px 40px;
+        font-size: 20px;
+    }
+}
+
+@media screen and (max-width: 678px) {
+    .content-contact-invite {
+        width: 95% !important;
+        padding: 20px;
+    }
+    
+    .content-contact-invite .title {
+        font-size: 50px;
+    }
+    
+    .content-contact-invite .des0 {
+        font-size: 22px;
+    }
+    
+    .content-contact-invite .des1 {
+        font-size: 16px;
+    }
+    
+    .content-contact-invite .des2 {
+        font-size: 14px;
+    }
+    
+    .contact-btn {
+        padding: 12px 30px;
+        font-size: 18px;
+        gap: 10px;
+    }
+    
+    .contact-btn i {
+        font-size: 16px;
+    }
+}

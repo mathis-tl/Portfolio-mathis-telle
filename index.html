@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animated Image Slider</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+</head>
+<body>
+    
+    <header>
+
+        <nav>
+            <a href="/" class="active">Home</a>
+            <a href="/about">About</a>
+            <a href="/portfolio">Portfolio</a>
+            <a href="/services">Services</a>
+            <a href="/contact">Contact</a>
+        </nav>
+
+    </header>
+
+
+    <div class="carousel">
+
+        <div class="list">
+
+            <div class="item" style="background-image: url(image/contact.jpg);">
+                <div class="content content-contact-invite">
+                    <div class="content-wrapper">
+                        <div class="title"></div>
+                        <div class="contact-message">
+                            <div class="des1">pour discuter de vos projets, opportunités ou simplement échanger</div>
+                            <div class="des2">Je serai ravi de répondre à vos questions !</div>
+                        </div>
+                        <div class="btn-contact">
+                            <button class="contact-btn" onclick="window.location.href='/contact'">
+                                <i class="fas fa-envelope"></i>
+                                CONTACT
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="item" style="background-image: url(image/photo.jpg);">
+                
+                <div class="content">
+                    <div class="title">MATHIS</div>
+                    <div class="name">TELLE</div>
+                    <div class="des">Entre projets personnels et formation d'ingénieur, je développe mes
+compétences techniques avec curiosité. Passioné par l'UX/Ul design et développement full-stack, je reste polyvalent et adaptable</div>
+                    <div class="btn">
+                        <button onclick="window.location.href='/contact'">contact</button>
+                        
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="item" style="background-image: url(image/parcours.jpg);">
+
+                <div class="content content-centered">
+                    <div class="content-wrapper">
+                        <div class="title">PARCOURS</div>
+                        <div class="des0">École d'Ingénieur en Informatique  2022 - </div>
+                        <div class="des1">ISTY - UVSQ/Paris Saclay</div>
+                        <div class="des0">Classes Préparatoires aux Grandes Écoles 2020-2022</div>
+                        <div class="des1">LYcée bellevue(MQ) filière scientifique.</div>
+                        <div class="des0">Baccalauréat scientifique - 2020</div>
+                        <div class="des1">Mention bien</div>
+                        <div class="btn">
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="item" style="background-image: url(image/competence.jpg);">
+                
+                <div class="content content-skills">
+                    <div class="content-wrapper">
+                        <div class="title">COMPÉTENCES</div>
+                        
+                        <div class="skill-section">
+                            <div class="des0">1. Langages de programmation</div>
+                            <div class="des1">Python, Java, JavaScript, C/C++, PHP</div>
+                            <div class="des1">HTML/CSS (développement web)</div>
+                        </div>
+
+                        <div class="skill-section">
+                            <div class="des0">2. Technologies web</div>
+                            <div class="des1">Frontend : React, Vue.js, Angular</div>
+                            <div class="des1">Backend : Node.js, Express, Django</div>
+                            <div class="des1">CSS : Tailwind, Bootstrap, Sass</div>
+                        </div>
+
+                        <div class="skill-section">
+                            <div class="des0">3. Mobile & Desktop</div>
+                            <div class="des1">React Native, Flutter, Electron</div>
+                        </div>
+
+                        <div class="skill-section">
+                            <div class="des0">4. Bases de données</div>
+                            <div class="des1">SQL : MySQL, PostgreSQL</div>
+                            <div class="des1">NoSQL : MongoDB, Firebase</div>
+                        </div>
+
+                        <div class="skill-section">
+                            <div class="des0">5. Outils & DevOps</div>
+                            <div class="des1">Git/GitHub, Docker, VS Code</div>
+                            <div class="des1">Figma (UX/UI), Postman, npm/yarn</div>
+                        </div>
+
+                        <div class="skill-section">
+                            <div class="des0">6. Design (UX/UI)</div>
+                            <div class="des1">Figma, Adobe XD, Sketch</div>
+                            <div class="des1">Principes de design, prototypage</div>
+                            <div class="des1">Design systems</div>
+                        </div>
+
+                        <div class="btn">
+                            
+                            <button>Contact</button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="item" style="background-image: url(image/projet1.jpg);">
+                
+                <div class="content">
+                    <div class="title">PROJETS</div>
+                    <div class="name"></div>
+                    <div class="des">Je vous invite à consulter la page rassemblant l'ensemble de mes projets scolaires ou personnels.</div>
+                    <div class="btn">
+                        <button>See More</button>
+                        
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="item" style="background-image: url(image/parcours2.jpg);">
+                
+                <div class="content content-experience">
+                    <div class="content-wrapper">
+                        <div class="title">EXPÉRIENCES</div>
+                        
+                        <div class="experience-section">
+                            <div class="des0">1. Stage - Collectivité Territoriale de Martinique (2024)</div>
+                            <div class="des1">Poste : Stagiaire Développeur - Bureau de Développement Applicatif</div>
+                            <div class="des1">Période : Juin - Août 2024 (3 mois)</div>
+                            <div class="des1">Missions principales :</div>
+                            <div class="des2">• Migration intranet PHP 5 → PHP 8.2 fmp Alpine</div>
+                            <div class="des2">• Reconstruction complète sous WordPress + Docker</div>
+                            <div class="des2">• Développement plugin API Requea pour gestion réunions</div>
+                            <div class="des2">• Mise en place pipeline CI/CD</div>
+                            <div class="tech-tag">Technologies : PHP, WordPress, Docker, Git, API REST</div>
+                        </div>
+
+                        <div class="experience-section">
+                            <div class="des0">2. Stage - Mairie de La Trinité, Martinique (2023)</div>
+                            <div class="des1">Poste : Stagiaire - Service Système d'Information</div>
+                            <div class="des1">Période : Juin 2023 (1 mois)</div>
+                            <div class="des1">Missions principales :</div>
+                            <div class="des2">• Développement page web QR codes monuments historiques</div>
+                            <div class="des2">• Inventaire parc informatique municipal</div>
+                            <div class="des2">• Support technique Helpdesk</div>
+                            <div class="des2">• Installation matériel réunions/conférences</div>
+                            <div class="tech-tag">Technologies : HTML, CSS, responsive design, GitHub</div>
+                        </div>
+
+                        <div class="experience-section">
+                            <div class="des0">3. Aide aux devoirs</div>
+                            <div class="des1">Activité : Soutien scolaire jeunes martiniquais</div>
+                            <div class="des1">Compétences : Pédagogie, patience, communication</div>
+                        </div>
+
+                        <div class="btn">
+                            <button>Portfolio</button>
+                            <button>Contact</button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="item" style="background-image: url(image/profil.jpg);">
+                
+                <div class="content content-interests">
+                    <div class="content-wrapper">
+                        <div class="title">PROFIL</div>
+                        
+                        <div class="interest-section">
+                            <div class="section-title">LANGUES</div>
+                            <div class="interest-item">
+                                <div class="des0">Français :</div>
+                                <div class="des1">Langue maternelle</div>
+                            </div>
+                            <div class="interest-item">
+                                <div class="des0">Anglais :</div>
+                                <div class="des1">Courant (TOEIC validé)</div>
+                            </div>
+                            <div class="interest-item">
+                                <div class="des0">Espagnol :</div>
+                                <div class="des1">Intermédiaire</div>
+                            </div>
+                        </div>
+
+                        <div class="interest-section">
+                            <div class="section-title">CENTRES D'INTÉRÊT</div>
+                            
+                            <div class="category">
+                                <div class="des0">Tech & Sciences</div>
+                                <div class="des2">• Veille technologique et innovations</div>
+                                <div class="des2">• Passionné de physique et d'astrophysique</div>
+                                <div class="des2">• Intelligence artificielle et nouvelles technologies</div>
+                            </div>
+
+                            <div class="category">
+                                <div class="des0">Créatif & Design</div>
+                                <div class="des2">• Design graphique et UX/UI</div>
+                                <div class="des2">• Photographie</div>
+                                <div class="des2">• Sens artistique développé</div>
+                            </div>
+
+                            <div class="category">
+                                <div class="des0">Sport & Musique</div>
+                                <div class="des2">• Football (10 ans de pratique) - esprit d'équipe</div>
+                                <div class="des2">• Guitare - créativité et persévérance</div>
+                                <div class="des2">• Passionné de musique</div>
+                            </div>
+
+                            <div class="category">
+                                <div class="des0">Loisirs</div>
+                                <div class="des2">• Gaming et culture vidéoludique</div>
+                                <div class="des2">• Exploration spatiale et sciences</div>
+                            </div>
+                        </div>
+
+                        <div class="btn">
+                            <button>Contact</button>
+                            <button>LinkedIn</button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            
+
+        </div>
+
+        <!--next prev button-->
+        <div class="arrows">
+            <button class="prev"><</button>
+            <button class="next">></button>
+        </div>
+
+
+        <!-- time running -->
+        <div class="timeRunning"></div>
+
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>

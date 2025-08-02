@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Mathis Telle</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="contact.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="/">Home</a>
+            <a href="/about">About</a>
+            <a href="/portfolio">Portfolio</a>
+            <a href="/services">Services</a>
+            <a href="/contact" class="active">Contact</a>
+        </nav>
+    </header>
+
+    <div class="contact-container">
+        <div class="contact-content">
+            <div class="contact-header">
+                <h1>Contactez-moi</h1>
+                <p>N'hésitez pas à me contacter pour discuter de vos projets ou opportunités</p>
+            </div>
+
+            <div class="contact-info">
+                <div class="contact-card">
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <div class="contact-details">
+                            <h3>Email</h3>
+                            <a href="mailto:tellemathis@gmail.com">tellemathis@gmail.com</a>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <i class="fab fa-linkedin"></i>
+                        <div class="contact-details">
+                            <h3>LinkedIn</h3>
+                            <a href="https://linkedin.com/in/mathis-telle" target="_blank">linkedin.com/in/mathis-telle</a>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <div class="contact-details">
+                            <h3>Téléphone</h3>
+                            <a href="tel:+33123456789">+33 6 19 64 90 31</a>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <i class="fab fa-github"></i>
+                        <div class="contact-details">
+                            <h3>GitHub</h3>
+                            <a href="https://github.com/mathis-telle" target="_blank">github.com/mathis-telle</a>
+                            <small>Veuillez mettre à jour avec votre vrai GitHub</small>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="contact-form">
+                    <h3>Envoyez-moi un message</h3>
+                    <form name="contact" method="POST" data-netlify="true" action="/contact-success">
+                        <input type="hidden" name="form-name" value="contact" />
+                        <div class="form-group">
+                            <input type="text" name="name" placeholder="Votre nom" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" name="email" placeholder="Votre email" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" name="subject" placeholder="Sujet" required>
+                        </div>
+                        <div class="form-group">
+                            <textarea name="message" rows="6" placeholder="Votre message" required></textarea>
+                        </div>
+                        <button type="submit" class="submit-btn">
+                            <i class="fas fa-paper-plane"></i>
+                            Envoyer le message
+                        </button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="back-home">
+                <a href="/" class="back-btn">
+                    <i class="fas fa-arrow-left"></i>
+                    Retour au portfolio
+                </a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

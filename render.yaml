@@ -1,0 +1,9 @@
+version: 1
+builds:
+  - type: node
+    startCommand: npm start
+    buildCommand: npm install
+routes:
+  - type: redirect
+    source: /contact
+    destination: /contact.html

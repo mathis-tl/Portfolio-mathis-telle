@@ -1,0 +1,19 @@
+{
+  "name": "image-slider-server",
+  "version": "1.0.0",
+  "description": "Serveur local pour le slider d'images",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "nodemon server.js"
+  },
+  "keywords": ["slider", "images", "html", "css", "javascript"],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1"
+  }
+}
