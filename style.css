@@ -7,6 +7,25 @@
     font-family: 'Poppins', sans-serif;
 }
 
+/* Fix pour le rendu net du texte */
+* {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+}
+
+.list .item .content,
+.content-centered,
+.content-skills,
+.content-experience {
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -webkit-perspective: 1000px;
+    perspective: 1000px;
+}
+
 /* Header section */
 
 header{
@@ -107,11 +126,12 @@ a:hover{
     position: absolute;
     top: 50%;
     left: 100px;
-    transform: translateY(-50%);
+    transform: translateY(-50%) translateZ(0);
     width: 400px;
     text-align: left;
     color: #fff;
     display: none;
+    will-change: transform;
 }
 
 .list .item:nth-child(2) .content{
@@ -124,9 +144,12 @@ a:hover{
     color: #14ff72cb;
     font-weight: bold;
     line-height: 1;
-
+    
     opacity: 0;
     animation: animate 1s ease-in-out 0.3s 1 forwards;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
 }
 
 .content .name{
@@ -137,6 +160,9 @@ a:hover{
 
     opacity: 0;
     animation: animate 1s ease-in-out 0.6s 1 forwards;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
 }
 
 .content .des{
@@ -147,6 +173,9 @@ a:hover{
 
     opacity: 0;
     animation: animate 1s ease-in-out 0.9s 1 forwards;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
 }
 .content .des1{
     margin-top: 2px;
@@ -207,10 +236,11 @@ a:hover{
 /* Style spécifique pour centrer la slide PARCOURS */
 .content-centered {
     left: 30% !important;
-    transform: translate(-50%, -50%) !important;
+    transform: translate(-50%, -50%) translateZ(0) !important;
     text-align: center !important;
     width: 600px !important;
     max-width: 90vw;
+    will-change: transform;
 }
 
 .content-wrapper {
@@ -256,13 +286,14 @@ a:hover{
 .content-skills {
     right: 0 !important;
     left: auto !important;
-    transform: translateY(-50%) !important;
+    transform: translateY(-50%) translateZ(0) !important;
     text-align: left !important;
     width: 100vw !important;
     height: 80vh;
     overflow-y: auto;
     padding-right: 0;
     padding-left: 50px;
+    will-change: transform;
 }
 
 .content-skills .content-wrapper {
@@ -325,12 +356,13 @@ a:hover{
 /* Style spécifique pour la slide EXPÉRIENCES */
 .content-experience {
     left: 50px !important;
-    transform: translateY(-50%) !important;
+    transform: translateY(-50%) translateZ(0) !important;
     text-align: left !important;
     width: 95vw !important;
     height: 85vh;
     overflow-y: auto;
     padding-right: 20px;
+    will-change: transform;
 }
 
 .content-experience .content-wrapper {
